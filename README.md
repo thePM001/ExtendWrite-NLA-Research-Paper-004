@@ -162,8 +162,10 @@ Step 3: Atomic update. The three sub-operations execute sequentially within a si
 Step 4: Invariant verification. Check that ℒ′ satisfies all lattice invariants (closure, sector boundaries, trust rings).
 Step 5: Commit or rollback. If invariants hold, commit ℒ′ and store the lattice diff. If invariants are violated, rollback to ℒ and return an error.
 The lattice diff records the added node, added edges, attractor field changes and a bridge-authoritative timestamp, enabling full reversal of the lattice extension.
-[Figure 2: Lattice Extension Before and After] 
 
+## [Figure 2: Lattice Extension Before and After] 
+
+(please refer to PDF version)
  
 ## Left panel: the lattice ℒ before extend-write, showing existing capsule nodes, edges and attractor basins. 
 
@@ -176,20 +178,18 @@ Consistency. The invariant check ensures the lattice is in a valid state after e
 Isolation. When multiple extend-writes target non-overlapping neighborhoods (as determined by the proximity search), they can execute concurrently without interference. Overlapping neighborhoods require serialization or conflict resolution.
 Durability. The diff record persists the complete change set, enabling both undo and audit.
  
-
 ## 5. Invariant Analysis
 Extend-Write is distinguished from the four classical primitives by five invariants that hold for every successful operation.
+### Invariant 1 (Preservation). All existing valid knowledge survives the operation. Formally: for every factor f in factorize(existing), either f appears in the preserved set (unchanged) or it appears as the fₒ component of a shared pair (reinforced but recoverable). No factor is discarded.
+### Invariant 2 (Relationship modification). The structural relationships between factors are modified, not merely accumulated. The bundling of shared factors and the binding of novel factors to existing structure produce a result whose factor-to-factor similarity matrix differs from that of both the existing and new vectors independently.
+### Invariant 3 (Structural integrity). The structure predicate P holds on the output. Whatever domain-specific invariants the lattice requires (decodability, cluster separation, sector boundaries, trust constraints) are verified before the operation commits.
+### Invariant 4 (Strict enrichment). The extended structure encodes at least as many recoverable factors as the original, plus at least one novel factor:
 
-# Invariant 1 (Preservation). All existing valid knowledge survives the operation. Formally: for every factor f in factorize(existing), either f appears in the preserved set (unchanged) or it appears as the fₒ component of a shared pair (reinforced but recoverable). No factor is discarded.
-
-# Invariant 2 (Relationship modification). The structural relationships between factors are modified, not merely accumulated. The bundling of shared factors and the binding of novel factors to existing structure produce a result whose factor-to-factor similarity matrix differs from that of both the existing and new vectors independently.
-
-# Invariant 3 (Structural integrity). The structure predicate P holds on the output. Whatever domain-specific invariants the lattice requires (decodability, cluster separation, sector boundaries, trust constraints) are verified before the operation commits.
-
-# Invariant 4 (Strict enrichment). The extended structure encodes at least as many recoverable factors as the original, plus at least one novel factor:
 |factorize(extended)| ≥ |factorize(existing)|  and  |novel| ≥ 1
+
 This measure is well-defined in hypervector space where all vectors have identical dimensionality d and cardinality of the vector itself cannot serve as a richness measure. The number of recoverable factors is the correct metric: it counts distinguishable concepts encoded in the structure.
-Invariant 5 (Reversibility). The diff record D contains sufficient information to reconstruct the exact pre-extend state. The undo operation is well-defined, deterministic and produces a vector whose cosine similarity with the original existing vector approaches 1.0 (exact in the absence of numerical precision limits).
+
+### Invariant 5 (Reversibility). The diff record D contains sufficient information to reconstruct the exact pre-extend state. The undo operation is well-defined, deterministic and produces a vector whose cosine similarity with the original existing vector approaches 1.0 (exact in the absence of numerical precision limits).
 
 
 ## Comparison with Classical Primitives
