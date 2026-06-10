@@ -1,12 +1,13 @@
 # ExtendWrite-NLA-Research-Paper-004
-# Extend-Write: A Reversible Structural Assimilation Primitive for Hyper-dimensional Knowledge Lattices and Continual Learning in Autonomous Super-intelligent Systems
 
-# Author: the.PM
-# Iberian Peninsula Human Civilization Continuation Project / New Lisbon Agency (NLA)
-# Correspondence: support@newlisbon.agency
-# Release date: 10th June 2026
-# Authorship commitment: This document (PDF version) was timestamped via OpenTimestamps. The matching .ots proof is available upon authorship dispute claim.
-# Acknowledgement: Contributions by Elena, whose words, work and project serve as co-creation to the foundation from which this formalization was able to be synthesized by being able to parse the logic.
+## Extend-Write: A Reversible Structural Assimilation Primitive for Hyper-dimensional Knowledge Lattices and Continual Learning in Autonomous Super-intelligent Systems
+
+### Author: the.PM
+### Iberian Peninsula Human Civilization Continuation Project / New Lisbon Agency (NLA)
+### Correspondence: support@newlisbon.agency
+### Release date: 10th June 2026
+### Authorship commitment: This document (PDF version) was timestamped via OpenTimestamps. The matching .ots proof is available upon authorship dispute claim.
+### Acknowledgement: Contributions by Elena, whose words, work and project serve as co-creation to the foundation from which this formalization was able to be synthesized by being able to parse the logic.
  
 ## Abstract
 Current computational memory architectures rely on four foundational primitives: 
