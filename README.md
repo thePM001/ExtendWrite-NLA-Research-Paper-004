@@ -1,14 +1,14 @@
 # ExtendWrite-NLA-Research-Paper-004
-## Extend-Write: A Reversible Structural Assimilation Primitive for Hyper-dimensional Knowledge Lattices and Continual Learning in Autonomous Super-intelligent Systems
+# Extend-Write: A Reversible Structural Assimilation Primitive for Hyper-dimensional Knowledge Lattices and Continual Learning in Autonomous Super-intelligent Systems
 
-## Author: the.PM
-## Iberian Peninsula Human Civilization Continuation Project / New Lisbon Agency (NLA)
-## Correspondence: support@newlisbon.agency
-## Release date: 10th June 2026
-## Authorship commitment: This document (PDF version) was timestamped via OpenTimestamps. The matching .ots proof is available upon authorship dispute claim.
-## Acknowledgement: Contributions by Elena, whose words, work and project serve as co-creation to the foundation from which this formalization was able to be synthesized by being able to parse the logic.
+# Author: the.PM
+# Iberian Peninsula Human Civilization Continuation Project / New Lisbon Agency (NLA)
+# Correspondence: support@newlisbon.agency
+# Release date: 10th June 2026
+# Authorship commitment: This document (PDF version) was timestamped via OpenTimestamps. The matching .ots proof is available upon authorship dispute claim.
+# Acknowledgement: Contributions by Elena, whose words, work and project serve as co-creation to the foundation from which this formalization was able to be synthesized by being able to parse the logic.
  
-##Abstract
+## Abstract
 Current computational memory architectures rely on four foundational primitives: 
 WRITE (destructive overwrite), APPEND (accumulative addition), READ (passive retrieval) and DELETE (targeted removal). These four operations are insufficient for systems that must maintain coherent, growing knowledge structures across unbounded learning horizons. 
 
@@ -20,7 +20,7 @@ To our knowledge, no prior work combines resonator-based factorization, shared/n
 
  
 
-##1. Introduction
+## 1. Introduction
 The problem of catastrophic forgetting has shadowed artificial intelligence research for decades. When a neural network learns new information, it tends to overwrite the representations that encoded prior knowledge. 
 
 This failure mode is so pervasive that it has spawned an entire subfield of continual learning research, producing techniques such as Elastic Weight Consolidation (Kirkpatrick et al., 2017), progressive neural networks (Rusu et al., 2016) and experience replay mechanisms. 
